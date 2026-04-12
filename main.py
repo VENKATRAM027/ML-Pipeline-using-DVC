@@ -1,4 +1,16 @@
-from src.demo import venkat
+import os
 
-obj = venkat()
-obj.print_details()
+os.system('python src/data_ingestion.py')
+print('Data ingestion')
+
+os.system('python src/data_preprocessing.py')
+print('Data preprocessing')
+
+os.system('python src/feature_engineering.py')
+print('feature engineering')
+
+os.system('python src/model_building.py')
+print('model building')
+
+os.system('python src/model_evaluation.py')
+print('model evaluation')
