@@ -76,7 +76,8 @@ Alternatively, you can trigger the pipeline via the main script:
 Bash
 python main.py
 
-<img width="765" height="511" alt="Screenshot 2026-04-23 212212" src="https://github.com/user-attachments/assets/0dc5bb9c-51cb-4b21-b05e-0980a249ba70" />
+<img width="765" height="511" alt="Screenshot 2026-04-23 212212" src="https://github.com/user-attachments/assets/2098d85f-1bfc-451e-bc5b-a8aa823fd629" />
+
 
 
 👨‍💻 Author
