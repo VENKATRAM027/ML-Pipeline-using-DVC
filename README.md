@@ -1,5 +1,3 @@
-# ML-Pipeline-using-DVC
-
 # 🚀 End-to-End Machine Learning Pipeline using DVC
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
@@ -7,15 +5,17 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ## 📌 Project Overview
+
 This repository demonstrates a production-grade, end-to-end Machine Learning pipeline utilizing **Data Version Control (DVC)**. 
 
 Moving beyond traditional Jupyter Notebook experimentation, this project is structured for **reproducibility, scalability, and MLOps best practices**. By tracking both the code (via Git) and the data/models (via DVC), this pipeline ensures that any model training process can be flawlessly reproduced across different environments.
 
-### Key Objectives:
-* Implement modular and scalable codebase architecture.
-* Manage and version large datasets and model weights using DVC.
-* Create a reproducible pipeline graph (`dvc.yaml`) for automated training and evaluation.
-* Package the ML project as a clean, installable Python module using `setup.py`.
+### Key Features:
+* **Data & Model Versioning:** Large datasets and model artifacts are tracked using DVC, keeping the Git repository lightweight.
+* **Modular Codebase:** Clean separation of concerns (data ingestion, transformation, model training) for scalability.
+* **Reproducible Pipeline:** Automated pipeline execution defined in `dvc.yaml`.
+* **Custom Logging & Exception Handling:** Robust tracking of the pipeline's execution state.
+* **Installable Package:** Structured as a standard Python module using `setup.py`.
 
 ---
 
@@ -37,8 +37,53 @@ ML-Pipeline-using-DVC/
 ├── main.py                 # Entry point to trigger the pipeline execution
 ├── setup.py                # Python package configuration
 ├── requirements.txt        # Project dependencies
-├── .dvcignore              # Files to be ignored by DVC
-├── .gitignore              # Files to be ignored by Git
 └── README.md               # Project documentation
 
-pip install requirements.txt, and run dvc repro or python main.py
+⚙️ Prerequisites
+Before running the pipeline, ensure you have the following installed:
+
+Python 3.8 or higher
+
+Git
+
+DVC (pip install dvc)
+
+🚀 How to Run the Project
+1. Clone the repository
+Bash
+git clone [https://github.com/VENKATRAM027/ML-Pipeline-using-DVC.git](https://github.com/VENKATRAM027/ML-Pipeline-using-DVC.git)
+cd ML-Pipeline-using-DVC
+
+2. Create a virtual environment and install dependencies
+Bash
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+pip install -r requirements.txt
+
+3. Initialize and Pull DVC Data
+(Note: If you are using remote storage like AWS S3 or Google Drive for DVC, configure it here. Otherwise, local DVC cache will be used.)
+
+Bash
+dvc pull
+
+4. Execute the Pipeline
+To run the entire machine learning pipeline (data ingestion -> transformation -> training) simply execute:
+
+Bash
+dvc repro
+Alternatively, you can trigger the pipeline via the main script:
+
+Bash
+python main.py
+
+<img width="765" height="511" alt="Screenshot 2026-04-23 212212" src="https://github.com/user-attachments/assets/0dc5bb9c-51cb-4b21-b05e-0980a249ba70" />
+
+
+👨‍💻 Author
+Venkat Ram
+
+LinkedIn: www.linkedin.com/in/
+venkat-ram-106867403
+
+
+GitHub: @VENKATRAM027
