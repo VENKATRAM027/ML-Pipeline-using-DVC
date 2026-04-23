@@ -40,3 +40,5 @@ ML-Pipeline-using-DVC/
 ├── .dvcignore              # Files to be ignored by DVC
 ├── .gitignore              # Files to be ignored by Git
 └── README.md               # Project documentation
+
+pip install requirements.txt, and run dvc repro or python main.py
